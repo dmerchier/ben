@@ -1,8 +1,14 @@
 import os
 import numpy as np
 
-from utils.data_access import card_index_lookup
 from utils.deal import DealMeta, seats, seat_index, suit_index_lookup
+
+card_index_lookup = dict(
+    zip(
+        ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2'],
+        range(13)
+    )
+)
 
 card_index_lookup_x = dict(
     zip(

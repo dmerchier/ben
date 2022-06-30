@@ -39,7 +39,7 @@ python bidding_binary.py 588735 bidding_data.txt binary/bidding
 
 The above command will create two new files into the `binary/bidding` folder: `X.npy` and `y.npy`. `X.npy` contains the inputs to the neural network and `y.npy` contains the expected outputs. Both are stored in numpy array format.
 
-Then, run the trainig script. This will take several hours to complete, but it will save snapshots of the model as it progresses. If you have a GPU, the training will run faster, but not much faster, because GPUs are not so well suited for the type of NN used.
+Then, run the training script. This will take several hours to complete, but it will save snapshots of the model as it progresses. If you have a GPU, the training will run faster, but not much faster, because GPUs are not so well suited for the type of NN used.
 
 ```
 python bidding_nn.py binary/bidding models/bidding
@@ -51,7 +51,7 @@ When the network is completed, you can plug it back into the engine to use inste
 
 This part describes how you can load an already trained model and continue training it (without the training starting from scratch)
 
-Let's say your already trained model is stored in the `model` folder and you want to continue training it and then store the results to the `model2` folder. You can do this by running the [bidding_nn_continue.py](bidding_nn_continue.py) script.
+Let's say your already trained model is stored in the `models/bidding` folder and you want to continue training it and then store the results to the `models/bidding-bis` folder. You can do this by running the [bidding_nn_continue.py](bidding_nn_continue.py) script.
 
 ```
 mkdir -p models/bidding-bis
