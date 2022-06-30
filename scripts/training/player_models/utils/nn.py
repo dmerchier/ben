@@ -155,7 +155,7 @@ def continue_nn(bin_dir, checkpoint_model, out_dir, file_prefix):
                 c_train = sess.run(cost, feed_dict={seq_in: x_cost, seq_out: y_cost, keep_prob: 1.0})
                 c_valid = sess.run(cost, feed_dict={seq_in: x_val, seq_out: y_val, keep_prob: 1.0})
 
-                print('{}. c_train={} c_valid={}'.format('{}/{}'.format(i, n_iterations), c_train, c_valid))
+                print('{}. c_train={} c_valid={}'.format('{}/{}'.format(i, start_iteration + n_iterations), c_train, c_valid))
 
                 sys.stdout.flush()
                 saver.save(sess, model_path, global_step=i)
